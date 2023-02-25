@@ -16,6 +16,7 @@
 			<input type="submit" name="submit" value="Login">
 			<p>Don't have an account? <a href="signup.php">Sign up</a></p>
 			<p>Forgotpassword<a href="forgotpassword.php">Forgotpassword</a></p>
+			vasu
 		</form>
 	</div>
 </body>
