@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+            <img src="images/instagram.png" style="width:50px;height:auto">
+            <h1>Instagram </h1>
+            </div>
+            <button onclick="show_hide()" type="button"><img style="width:40px;height:auto "src="images/down-chevron.png" alt=""></button>
+        </header>
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>Contacts</h3>
+                </div>
+                <div class="users-list">
+                    <div class="chat-group">
+                     <button id="v" onclick="show_v()">Vinesh</button> <h4 class="hider" id ="a">2</h4>
+                    </div>
+                    <div class="chat-group">
+                        <button id="d" onclick="show_d()">Decostar</button> <h4 class="hider">2</h4>
+                    </div>
+                    <div class="chat-group">
+                        <button id="h" onclick="show_h()">Heet</button> <h4 class="hider">4</h4>
+                    </div>
+                    <button type="button" onclick="h4_hide()">Read All</button>
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats" id="vinesh" style="display: block;">
+                    <div class="user-join">
+                        <p><b>Vinesh Joined The Chat</b></p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>ABCD</h5>
+                        <p>hello xyz</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Vinesh</h5>
+                        <p>Hello Xyz</p>
+                    </div>  
+                    <div class="message incoming">
+                        <h5>Vinesh</h5>
+                        <p>Hello Xyz</p>
+                    </div> 
+                </div>
+                <div class="chats" id="decostar" style="display:none;">
+                    <div class="user-join">
+                        <p><b>Decostar Joined The Chat</b></p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>ABCD</h5>
+                        <p>hello xyz</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Decostar</h5>
+                        <p>Hello Xyz</p>
+                    </div>  
+                    <div class="message incoming">
+                        <h5>Decostar</h5>
+                        <p>Hello Xyz</p>
+                    </div> 
+                </div>
+                
+                <div class="chats" id="heet" style="display: none;">
+                    <div class="user-join">
+                        <p><b>Heet Joined The Chat</b></p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>ABCD</h5>
+                        <p>hello xyz</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Heet</h5>
+                        <p>Hello Xyz</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Heet</h5>
+                        <p>Hello Xyz</p>
+                    </div>   
+                    <div class="message incoming">
+                        <h5>Heet</h5>
+                        <p>Hello Xyz</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Heet</h5>
+                        <p>Hello Xyz</p>
+                    </div>
+                </div>
+                <div class="user-input">
+                    <input type="text" name="" id="" placeholder="Start Chatting">
+                    <button >SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+          
+  <script>
+    var uwindow = document.querySelector('.users-window');
+    var h4All = document.getElementsByClassName("hider");
+  
+    function show_hide(){
+        if(uwindow.style.display=="block"){
+            uwindow.style.display="none";
+        }
+        else{
+            uwindow.style.display="block";
+        }
+    }
+    function h4_hide(){
+    //var h4 = document.getElementById("a");
+    //h4.style.display = "none";  
+    for(var i =0;i<h4All.length;i++){
+        h4All.item(i).style.display="none";
+    }
+
+    }
+    var vin = document.getElementById("vinesh")
+    var dec = document.getElementById("decostar")
+    var heet = document.getElementById("heet")
+
+    function show_v(){
+        vin.style.display="block"
+        dec.style.display="none"
+        heet.style.display="none"  
+        h4All.item(0).style.display="none" 
+    }
+    function show_d(){
+        vin.style.display="none"
+        dec.style.display="block"
+        heet.style.display="none"  
+        h4All.item(1).style.display="none"
+    }
+    function show_h(){
+        vin.style.display="none"
+        dec.style.display="none"
+        heet.style.display="block" 
+        h4All.item(2).style.display="none"
+    }
+
+  </script>
+</body>
+</html>
