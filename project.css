@@ -5,6 +5,7 @@ body {
 #v, #d, #h {
   background-color: #3f3f3f;
   border: none;
+  cursor:pointer;
 }
 
 #v:hover, #d:hover, #h:hover {
